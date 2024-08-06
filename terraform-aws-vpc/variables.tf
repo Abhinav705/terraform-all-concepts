@@ -94,3 +94,23 @@ variable "database_subnet_cidrs" {
     }
 }
 
+
+variable "database_subnet_group_tags" {
+   type = map 
+   default = {}
+}
+#peering variables
+variable "is_peering_required" {
+    type = bool 
+    default = false
+}
+
+variable "acceptor_vpc_id" {
+    type = string
+    default = ""
+}
+
+variable "vpc_peering_tags" {
+    type = map 
+    default = {}
+}
