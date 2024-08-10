@@ -2,7 +2,7 @@
 variable "project_name" {
     type = string
 }
-variable "Environment" {
+variable "environment" {
     default = "dev"
 }
 variable "common_tags" {

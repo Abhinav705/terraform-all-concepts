@@ -7,7 +7,7 @@ module "ec2_instance" {
   vpc_security_group_ids = [data.aws_ssm_parameter.bastion_sg_id.value]
   # convert StringList to list and get first element
   subnet_id              = local.public_subnet_id #bastion creates in public subnet
-  ami = data.aws_ami.ami_info
+  ami = data.aws_ami.ami_info.id
 
   tags = merge(
     var.common_tags,{
