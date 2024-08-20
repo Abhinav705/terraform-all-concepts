@@ -59,7 +59,7 @@ module "records" {
   
   records = [
     {
-      name    = "web-${var.environment}" #sending all the traffic which are coming as *-dev.abhinavk.fun
+      name    = "web-${var.environment}" #sending all the traffic which are coming as web-dev.abhinavk.fun
       #to the load balancer
       type    = "A"
       allow_overwrite = true
