@@ -44,7 +44,7 @@ module "records" {
       #to the load balancer
       type    = "A"
       allow_overwrite = true
-      alias   = {
+      alias   = { #route traffic to the load balancer
         name    = aws_lb.app_alb.dns_name #dns_name and zoneid are outputs from records module
         zone_id = aws_lb.app_alb.zone_id
       }
